@@ -3,8 +3,7 @@ pipeline {
     tools {
            maven 'M2_HOME'
    }
-
-    stages {
+   stages {
         stage('Build') {
             steps {
                 sh 'mvn clean'
@@ -18,7 +17,6 @@ pipeline {
                 sh 'mvn test'
             }
         }
-        
         stage('deploy') {
             steps {
                 echo 'Hello World'
